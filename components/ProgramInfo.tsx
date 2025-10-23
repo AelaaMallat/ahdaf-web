@@ -77,7 +77,7 @@ export default function InfoCard({
                 href={link.url}
                 className="flex items-center gap-2 text-gray-800 hover:text-cgreen"
               >
-                <img
+                <Image
                   src={`/icons/${link.icon}.svg`}
                   alt={link.name}
                   className="w-8 h-8"
@@ -90,7 +90,7 @@ export default function InfoCard({
       </div>
 
       {/* Right Side - Image with Overlay */}
-      <div className="relative  w-full md:w-1/2  pt-20 md:pt-14 pb-8 flex flex-col items-center justify-center h-[100vh]] order-1 md:order-2">
+      <div className="relative w-full md:w-1/2 pt-20 md:pt-14 pb-8 flex flex-col items-center justify-center h-[100vh]] order-1 md:order-2">
         <div
           className="hidden md:block absolute inset-0 z-0"
           style={{
@@ -98,13 +98,12 @@ export default function InfoCard({
           }}
         ></div>
         <div className="md:hidden absolute inset-0 z-0 bg-cblue"></div>
-        <img
+        <Image
           src="/images/mask2.svg"
+          alt="Program mask overlay"
+          width={width}
+          height={height}
           className={`hidden lg:block md:absolute object-cover inset-0 z-10 pt-6 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2`}
-          style={{
-            height: `${height}px`,
-            width: `${width}px`,
-          }}
         />
 
         <div

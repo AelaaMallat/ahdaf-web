@@ -76,7 +76,7 @@ export default function InfoCard({
                 href={link.url}
                 className="flex items-center gap-2 text-gray-800 hover:text-cgreen"
               >
-                <img
+                <Image
                   src={`/icons/${link.icon}.svg`}
                   alt={link.name}
                   className="w-8 h-8"
@@ -97,13 +97,12 @@ export default function InfoCard({
           }}
         ></div>
         <div className="md:hidden absolute inset-0 z-0 bg-cblue"></div>
-        <img
+        <Image
           src="/images/mask2.svg"
+          alt="Program mask overlay"
+          width={width}  // Using the calculated width
+          height={height}  // Using the calculated height
           className={`hidden rotate-[-180deg] lg:block md:absolute object-cover inset-0 z-10 pt-6 -translate-x-1/6 -translate-y-1/2 left-1/2 top-1/2`}
-          style={{
-            height: `${height}px`,
-            width: `${width}px`,
-          }}
         />
 
         <div

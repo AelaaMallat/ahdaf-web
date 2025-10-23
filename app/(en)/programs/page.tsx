@@ -40,7 +40,7 @@ const InfoCard: React.FC<InfoCardProps> = ({ data }) => {
                 href={link.url}
                 className="flex items-center gap-2 text-gray-800 hover:text-green-600"
               >
-                <img src={link.icon} alt={link.name} className="w-6 h-6" />
+                <Image src={link.icon} alt={link.name} className="w-6 h-6" />
                 {link.name}
               </a>
             ))}
@@ -50,53 +50,70 @@ const InfoCard: React.FC<InfoCardProps> = ({ data }) => {
 
       {/* Right Side - Image with Overlay */}
       <div className="w-full md:w-1/2 flex justify-end">
-      <img src="/images/Vector 22.png" className="w-[255.5px] h-[359.5px] absolute mt-[70px]" />
-      <img src="/images/mask2.svg" className="h-[508px] w-[466px] mt-[160px] mr-[22px] absolute z-10" />
-          <div
-            className="relative max-w-sm md:max-w-full h-[508px] w-[466px] mt-[160px] mr-[22px]"
-            style={{
-              maskImage: "url('/images/Mask group.svg')",
-              WebkitMaskImage: "url('/images/Mask group.svg')",
-              maskSize: "cover",
-              WebkitMaskSize: "cover",
-            }}
+        <Image 
+          src="/images/Vector 22.png" 
+          width={255}
+          height={359}
+          alt="Decorative vector background"
+          className="absolute mt-[70px]"
+        />
+        <Image 
+          src="/images/mask2.svg"
+          width={466}
+          height={508}
+          alt="Mask overlay"
+          className="mt-[160px] mr-[22px] absolute z-10"
+        />
+        <div
+          className="relative max-w-sm md:max-w-full h-[508px] w-[466px] mt-[160px] mr-[22px]"
+          style={{
+            maskImage: "url('/images/Mask group.svg')",
+            WebkitMaskImage: "url('/images/Mask group.svg')",
+            maskSize: "cover",
+            WebkitMaskSize: "cover",
+          }}
+        >
+          {/* Swiper Slider */}
+          <Swiper
+            loop
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            modules={[Autoplay]}
+            className="w-full h-full"
           >
-            
-            {/* Swiper Slider */}
-            <Swiper
-              loop
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
-              modules={[Autoplay]}
-              className="w-full h-full"
-            >
-              <SwiperSlide>
-                <Image
-                  src={data.image}
-                  alt="Slide 1"
-                  fill
-                  className="object-cover"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src={data.image}
-                  alt="Slide 2"
-                  fill
-                  className="object-cover"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <Image
-                  src={data.image}
-                  alt="Slide 3"
-                  fill
-                  className="object-cover"
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div>
-          <img src="/images/Vector 20.png" className="w-[255.5px] h-[359.5px] absolute mt-[410px]" />
+            <SwiperSlide>
+              <Image
+                src={data.image}
+                alt="Slide 1"
+                fill
+                className="object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={data.image}
+                alt="Slide 2"
+                fill
+                className="object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={data.image}
+                alt="Slide 3"
+                fill
+                className="object-cover"
+              />
+            </SwiperSlide>
+          </Swiper>
         </div>
+        <Image 
+          src="/images/Vector 20.png"
+          width={255}
+          height={359}
+          alt="Decorative vector background"
+          className="absolute mt-[410px]"
+        />
+      </div>
 
     </div>
   );

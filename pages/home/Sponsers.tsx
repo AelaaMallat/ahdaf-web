@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const sponsors = [
   { name: "3Poli Robotics", logo: "/images/sponsers/3Poli Robotics.png" },
@@ -20,10 +21,12 @@ const Sponsors: React.FC = () => {
           {sponsors.map((sponsor, index) => (
             <div key={index} className="w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 p-4">
               <div className="bg-white p-4 rounded-lg shadow-md">
-                <img
+                <Image
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  className="mx-auto h-16"
+                  width={64}
+                  height={64}
+                  className="mx-auto h-16 w-auto object-contain"
                 />
                 <p className="text-center mt-2">{sponsor.name}</p>
               </div>
