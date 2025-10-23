@@ -112,6 +112,21 @@ export default function Navbar() {
               </div>
             </div>
           </li>
+          {/* <li className="relative group">
+            <button className="flex items-center gap-1 hover:text-cgreen transition-colors uppercase">
+              Language
+            </button>
+            <div className="absolute left-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out mt-2 bg-[#0b1c39] text-gray-100 rounded-md shadow-lg border border-gray-700 min-w-[200px] transform -translate-y-1 group-hover:translate-y-0">
+              <div className="py-2">
+                <Link href="/ar" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 hover:bg-gray-700 transition-colors" >
+                  Arabic
+                </Link>
+                <Link href="/" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 hover:bg-gray-700 transition-colors" >
+                  English
+                </Link>
+              </div>
+            </div>
+          </li> */}
           <li>
             <Link href="#" className="hover:text-cgreen transition-colors">
               ZAKAT & SADAKA
@@ -249,7 +264,7 @@ export default function Navbar() {
                 ZAKAT & SADAKA
               </Link>
             </li>
-            {/* <li className="relative">
+            <li className="relative">
               <button
                 className="w-full text-left flex justify-between items-center"
                 onClick={() => toggleDropdown("language")}
@@ -273,7 +288,7 @@ export default function Navbar() {
                   </Link>
                 </div>
               )}
-            </li> */}
+            </li>
           </ul>
           <button
             className="bg-red-600 px-4 py-2 rounded w-full uppercase"
