@@ -75,12 +75,16 @@ export default function InfoCard({
               <a
                 key={index}
                 href={link.url}
-                className="flex items-center gap-2 text-gray-800 hover:text-cgreen"
+                className="flex items-center gap-2 text-gray-800 hover:text-green-600"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Image
                   src={`/icons/${link.icon}.svg`}
-                  alt={link.name}
-                  className="w-8 h-8"
+                  alt={`${link.name} icon`}
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
                 />
                 {link.name}
               </a>

@@ -30,29 +30,26 @@ const AhdafNews: React.FC = () => {
             آخر الأخبار
           </h1>
           <h3 className="text-xl font-bold text-[#102F5C] mt-8">
-            AHDAF CHARITY ENDOWMENT
+            وقف أهداف الخيري
           </h3>
           <p className="text-[#041231] mt-2 text-justify">
-            Ahdaf Charity Endowment successfully hosted its Annual Ramadan
-            Gathering on Sunday, February 23, 2025, at Dar Al Amar Restaurant,
-            bringing together a distinguished group of business leaders and key
-            supporters.
+            في أجواء من الإيجابية، نظَّم وقف أهداف الخيري لقاءً طيباً صباح الأحد، 23 شباط 2025، شكر فيه فريق العمل والدَّاعمين لجهودهم في سبيل نهضة المجتمع، وليكون التعليم قضية محورية تحظى باهتمام الجميع وتعلق عليها الآمال والطموحات.
           </p>
           <p className="text-[#041231] mt-2 text-justify">
-            The event served as a platform to introduce Ahdaf’s upcoming Ramadan
-            campaign “ATA’UKA ALLAMANI”, emphasizing the importance of
-            collective efforts in supporting our programs. Additionally, it
-            provided an opportunity to reflect on the achievements and
-            initiatives undertaken over the past year, showcasing the impact of
-            community-driven projects and partnerships.
+            افتُتح اللقاء بتلاوة عطرة من القرآن الكريم وتلتها كلمة ألقاها الشيخ محمد مطرجي المدير التنفيذي لوقف أهداف الخيري الذي اكد فيها على أهمية تظافر الجهود لخدمة المجتمع.
           </p>
           <p className="text-[#041231] mt-2 text-justify">
-            During the gathering, attendees engaged in discussions on
-            sustainable giving, social responsibility, and future collaboration
-            opportunities, reinforcing Ahdaf’s commitment to creating long-term
-            positive change.
+            وشهد اللقاء عرضًا مرئيًا تناول أبرز برامج ومشاريع وقف "أهداف" الخيري، حيث برزت فيه رؤية "نطوِّر الإنسان ليُطوِّر العالم"، وقد استُعرضت الإنجازات والتطلعات المستقبلية بروح من التفاؤل والثقة بإمكانية تحقيق المزيد من التأثير الإيجابي.
           </p>
-
+          <p className="text-[#041231] mt-2 text-justify">
+            واختُتم اللقاء بترويقة ودية أتاحت للحاضرين تبادل الأفكار والتجارب في جوٍّ تعاوني، وسط وصلات إنشادية عذبة قدّمها المقرئ الشيخ عبدالمطلب خلوف.
+          </p>
+          <p className="text-[#041231] mt-2 text-justify">
+            بهذه الروح وبقلوب مفعمة بالأمل، يستعد فريق العمل ورجال الأعمال لاستقبال شهر رمضان الكريم، عاقدين العزم على مواصلة الجهود والمساهمة في بناء مجتمع أكثر تكافلًا.
+          </p>
+          <p className="text-[#041231] mt-2 text-justify">
+            وقف "أهداف" يتوجه بالشكر لكل من شارك في هذا اللقاء وأسهم في إنجاحه، سائلين الله أن يديم الخير ويبارك في مساعي الجميع.
+          </p>
         </div>
       </div>
     </section>

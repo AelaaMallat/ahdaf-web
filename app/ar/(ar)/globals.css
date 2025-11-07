@@ -2,7 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.body-ar {
+.body-ar,
+.body-ar h1,
+.body-ar h2,
+.body-ar h3,
+.body-ar h4,
+.body-ar h5,
+.body-ar h6 {
   direction: rtl;
   font-family: 'Tajawal', sans-serif;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Tajawal', sans-serif;
+  }
 }

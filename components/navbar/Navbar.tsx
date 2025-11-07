@@ -23,6 +23,95 @@ function DiractionIcon() {
   );
 }
 
+const LanguageSelector = () => {
+  const [language, setLanguage] = useState("English");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const languages = [
+    {
+      code: "en",
+      name: "English",
+      flag: "/icons/us-flag.svg",
+      path: "/",
+    },
+    {
+      code: "ar",
+      name: "العربية",
+      flag: "/icons/lb-flag.svg",
+      path: "/ar",
+    },
+  ];
+
+  return (
+    <div className="relative inline-block text-left">
+      <button
+        className="flex items-center gap-1 hover:text-cgreen transition-colors uppercase"
+        onClick={() => setIsOpen(!isOpen)}
+        onMouseEnter={() => setIsOpen(true)} // Show options on hover
+      >
+        <Image
+          src={languages.find((l) => l.name === language)?.flag || ""}
+          alt={`${language} flag`}
+          width={24}
+          height={16}
+          className="rounded-sm"
+        />
+        <span>{language}</span>
+      </button>
+
+      <div
+        className={`absolute left-0 ${
+          !isOpen ? "invisible opacity-0" : "visible opacity-100"
+        } transition-all duration-300 ease-in-out mt-2 bg-[#0b1c39] text-gray-100 rounded-md shadow-lg border border-gray-700 min-w-[200px] transform -translate-y-1`}
+      >
+        {/*<div className="py-2">
+          {language === "English" ? (
+            <Link
+              key="ar"
+              href={languages[1].path}
+              className="flex items-center px-4 py-2 hover:bg-gray-700 transition-colors"
+              onClick={() => {
+                setLanguage(languages[1].name);
+                setIsOpen(false);
+              }}
+            >
+              <Image
+                src={languages[1].flag}
+                alt={`${languages[1].name} flag`}
+                width={24}
+                height={16}
+                className="rounded-sm mr-2"
+              />
+              <span>{languages[1].name}</span>
+            </Link>
+          ) : (
+            languages.map((lang) => (
+              <Link
+                key={lang.code}
+                href={lang.path}
+                className="flex items-center px-4 py-2 hover:bg-gray-700 transition-colors"
+                onClick={() => {
+                  setLanguage(lang.name);
+                  setIsOpen(false);
+                }}
+              >
+                <Image
+                  src={lang.flag}
+                  alt={`${lang.name} flag`}
+                  width={24}
+                  height={16}
+                  className="rounded-sm mr-2"
+                />
+                <span>{lang.name}</span>
+              </Link>
+            ))
+          )}
+        </div>*/}
+      </div>
+    </div>
+  );
+};
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -112,21 +201,9 @@ export default function Navbar() {
               </div>
             </div>
           </li>
-          {/* <li className="relative group">
-            <button className="flex items-center gap-1 hover:text-cgreen transition-colors uppercase">
-              Language
-            </button>
-            <div className="absolute left-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out mt-2 bg-[#0b1c39] text-gray-100 rounded-md shadow-lg border border-gray-700 min-w-[200px] transform -translate-y-1 group-hover:translate-y-0">
-              <div className="py-2">
-                <Link href="/ar" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 hover:bg-gray-700 transition-colors" >
-                  Arabic
-                </Link>
-                <Link href="/" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 hover:bg-gray-700 transition-colors" >
-                  English
-                </Link>
-              </div>
-            </div>
-          </li> */}
+          <li className="relative">
+            <LanguageSelector />
+          </li>
           <li>
             <Link href="#" className="hover:text-cgreen transition-colors">
               ZAKAT & SADAKA
@@ -140,7 +217,7 @@ export default function Navbar() {
         </button>
         <button
           className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMenuOpen(false)}
         >
           <svg
             className="w-6 h-6"
@@ -264,31 +341,14 @@ export default function Navbar() {
                 ZAKAT & SADAKA
               </Link>
             </li>
-            <li className="relative">
-              <button
-                className="w-full text-left flex justify-between items-center"
-                onClick={() => toggleDropdown("language")}
-              >
-                Language
-                <span
-                  className={`transform transition-transform ${
-                    activeDropdown === "language" ? "rotate-180" : ""
-                  }`}
-                >
-                  <DiractionIcon />
-                </span>
-              </button>
-              {activeDropdown === "language" && (
-                <div className="bg-[#0b1c39] text-white p-4 rounded flex flex-col space-y-4">
+            {/* <li className="relative">
                   <Link href="/ar" onClick={() => setIsMenuOpen(false)}>
                     Arabic
                   </Link>
                   <Link href="/" onClick={() => setIsMenuOpen(false)}>
                     English
                   </Link>
-                </div>
-              )}
-            </li>
+            </li> */}
           </ul>
           <button
             className="bg-red-600 px-4 py-2 rounded w-full uppercase"

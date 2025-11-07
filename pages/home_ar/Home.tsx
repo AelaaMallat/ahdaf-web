@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Head>
         <title>Ahdaf Charity</title>
-        <meta name="description" content="Empowering Change Through Giving" />
+        <meta name="description" content="معًا لنبني شبابًا صالحًا مصلحًا" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className="w-full min-h-screen text-white">

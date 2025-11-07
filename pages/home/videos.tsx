@@ -41,7 +41,7 @@ const YouTubeVideoPage: React.FC = () => {
           ></iframe>
         </div>
 
-        <h2 className="text-2xl font-bold text-center text-[#102F5C] mt-10">The Levant.. identity and passion</h2>
+        <h2 className="text-2xl font-bold text-center text-[#102F5C] mt-10">The Levant.. Identity & Passion</h2>
         <div className="relative overflow-hidden rounded-lg aspect-video mt-6">
           <iframe
             className="w-full h-full"

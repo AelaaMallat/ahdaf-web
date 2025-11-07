@@ -18,8 +18,8 @@ const Hero = () => {
       <div className="relative flex flex-col md:flex-row items-center justify-between text-white space-y-8  md:space-y-0">
         {/* right Side - Text Content */}
         <div className="w-full md:w-1/2 text-center md:text-right">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-100 leading-tight md:mb-10 mr-12">
-            EMPOWERING CHANGE <br className="hidden md:block" /> THROUGH GIVING
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-100 leading-tight md:mb-10 mr-12 mt-4">
+            معًا لنبني شبابًا <br className="hidden md:block" /><br/> صالحًا مصلحًا
           </h1>
           <h2 className="text-xl lg:text-2xl font-bold text-cgreen mt-3 md:mt-4 md:mb-10 mr-12">
             وقف أهداف الخيري

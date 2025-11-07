@@ -84,25 +84,25 @@ export default function Navbar() {
                   إشراقة علم
                 </Link>
                 <Link
-                  href="/programs/alemni"
+                  href="/ar/programs/alemni"
                   className="block px-4 py-2 hover:bg-gray-700 transition-colors"
                 >
                   مؤسسة علمني
                 </Link>
                 <Link
-                  href="/programs/eshraqa"
+                  href="/ar/programs/eshraqa"
                   className="block px-4 py-2 hover:bg-gray-700 transition-colors"
                 >
                   أكاديمية إشراقة
                 </Link>
                 <Link
-                  href="/programs/ahdaf-school"
+                  href="/ar/programs/ahdaf-school"
                   className="block px-4 py-2 hover:bg-gray-700 transition-colors"
                 >
                   مدرسة أهداف
                 </Link>
                 <Link
-                  href="/programs/ajwad"
+                  href="/ar/programs/ajwad"
                   className="block px-4 py-2 hover:bg-gray-700 transition-colors"
                 >
                   مركز أجود
