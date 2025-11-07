@@ -24,7 +24,8 @@ function DiractionIcon() {
 }
 
 const LanguageSelector = () => {
-  const [language, setLanguage] = useState("English");
+  //const [language, setLanguage] = useState("English");
+  const [language] = useState("English");
   const [isOpen, setIsOpen] = useState(false);
 
   const languages = [

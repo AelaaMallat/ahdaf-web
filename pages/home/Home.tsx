@@ -5,7 +5,7 @@ import Impact from "./impact";
 import Hero from "./Hero";
 import Seperator from "@/components/Seperator";
 import Sponsors from "./Sponsers";
-import AhdafNews from "./latest _news";
+import AhdafNews from "./latest_news";
 import YouTubeVideoPage from "./videos";
 export default function Home() {
   return (
