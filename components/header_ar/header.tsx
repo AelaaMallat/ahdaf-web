@@ -24,7 +24,44 @@ function DiractionIcon() {
   );
 }
 
+const LanguageSelector = () => {
+  const languages = [
+    { code: "en", name: "English", flag: "/icons/us-flag.svg", path: "/" },
+    { code: "ar", name: "العربية", flag: "/icons/lb-flag.svg", path: "/ar" },
+  ];
 
+  return (
+    <div className="relative group">
+      <button className="flex items-center gap-1 hover:text-cgreen transition-colors font-bold">
+        <Image
+          src={languages[1].flag}
+          alt="العربية flag"
+          width={24}
+          height={16}
+          className="rounded-sm"
+        />
+        <span>العربية</span>
+      </button>
+      <div className="absolute right-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out mt-2 bg-[#0b1c39] text-gray-100 rounded-md shadow-lg border border-gray-700 min-w-[200px] transform -translate-y-1 group-hover:translate-y-0">
+        <div className="py-2">
+          <Link
+            href={languages[0].path}
+            className="flex items-center gap-2 px-4 py-2 hover:bg-gray-700 transition-colors"
+          >
+            <Image
+              src={languages[0].flag}
+              alt={`${languages[0].name} flag`}
+              width={24}
+              height={16}
+              className="rounded-sm"
+            />
+            <span>{languages[0].name}</span>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +75,7 @@ export default function Navbar() {
     <header>
       <nav className="fixed top-0 w-full bg-cblue p-4 flex justify-between items-center text-white z-50">
         <div className="text-xl font-bold">
-          <Link href="/">
+          <Link href="/ar">
             <Image
               src="/logos/ahdaf_logo.svg"
               width={100}
@@ -50,24 +87,46 @@ export default function Navbar() {
         </div>
         <ul className="hidden md:flex space-x-6 gap-12 font-medium">
           <li>
-            <Link href="/ar" className="hover:text-cgreen transition-colors  font-bold">الرئيسية</Link>
+            <Link
+              href="/ar"
+              className="hover:text-cgreen transition-colors font-bold"
+            >
+              الرئيسية
+            </Link>
           </li>
           <li className="relative group">
-            <button className="flex items-center gap-1 hover:text-cgreen transition-colors  font-bold"> حول الوقف </button>
+            <button className="flex items-center gap-1 hover:text-cgreen transition-colors font-bold">
+              حول الوقف
+            </button>
             <div className="absolute right-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out mt-2 bg-[#0b1c39] text-gray-100 rounded-md shadow-lg border border-gray-700 min-w-[200px] transform -translate-y-1 group-hover:translate-y-0">
               <div className="py-2">
                 <Link
-                href="/ar/about"
-                className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                  href="/ar/about"
+                  className="block px-4 py-2 hover:bg-gray-700 transition-colors"
                 >
-                من نحن؟
+                  من نحن؟
                 </Link>
                 <Link
-                href="/ar/about/history"
-                className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                  href="/ar/about/history"
+                  className="block px-4 py-2 hover:bg-gray-700 transition-colors"
                 >
-                تاريخنا
-                </Link>                
+                  تاريخنا
+                </Link>
+
+                <Link
+                  href="/ar/about/board"
+                  className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                >
+                مجلس الإدارة
+                </Link>
+
+                <Link
+                  href="/ar/about/gallery"
+                  className="block px-4 py-2 hover:bg-gray-700 transition-colors"
+                >
+                المعرض
+                </Link>
+                
               </div>
             </div>
           </li>
@@ -110,25 +169,16 @@ export default function Navbar() {
               </div>
             </div>
           </li>
-          <li className="relative group">
-            <button className="flex font-bold items-center gap-1 hover:text-cgreen transition-colors">
-             اللغة
-            </button>
-            <div className="absolute right-0 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out mt-2 bg-[#0b1c39] text-gray-100 rounded-md shadow-lg border border-gray-700 min-w-[200px] transform -translate-y-1 group-hover:translate-y-0">
-              <div className="py-2">
-                <Link href="/ar" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 hover:bg-gray-700 transition-colors" >
-                  العربية
-                </Link>
-                <Link href="/" onClick={() => setIsMenuOpen(false)} className="block px-4 py-2 hover:bg-gray-700 transition-colors" >
-                  الإنجليزية
-                </Link>
-              </div>
-            </div>
-          </li>
           <li>
-            <Link href="#" className="hover:text-cgreen font-bold transition-colors">
+            <Link
+              href="#"
+              className="hover:text-cgreen font-bold transition-colors"
+            >
               الزكاة والصدقة
             </Link>
+          </li>
+          <li className="relative">
+            <LanguageSelector />
           </li>
         </ul>
         <button className="bg-red-600 px-4 py-2 rounded hidden md:block">
@@ -157,11 +207,11 @@ export default function Navbar() {
         </button>
       </nav>
 
-            {isMenuOpen && (
+      {isMenuOpen && (
         <div className="md:hidden bg-cblue text-white p-4 space-y-4 fixed top-14 right-0 w-full z-50">
           <ul className="space-y-4">
             <li onClick={() => setIsMenuOpen(false)}>
-              <Link className="w-full block" href="/">
+              <Link className="w-full block" href="/ar">
                 الرئيسية
               </Link>
             </li>
@@ -170,7 +220,7 @@ export default function Navbar() {
                 className="w-full text-right flex justify-between items-center"
                 onClick={() => toggleDropdown("about")}
               >
-                من نحن
+                حول الوقف
                 <span
                   className={`transform transition-transform ${
                     activeDropdown === "about" ? "rotate-180" : ""
@@ -183,19 +233,35 @@ export default function Navbar() {
                 <div className="bg-cblue text-white p-4 rounded flex flex-col space-y-4">
                   <Link
                     className="w-full block"
-                    href="/about"
+                    href="/ar/about"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     من نحن؟
                   </Link>
-
                   <Link
                     className="w-full block"
-                    href="/about/history"
+                    href="/ar/about/history"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     تاريخنا
                   </Link>
+
+                  <Link
+                    className="w-full block"
+                    href="/ar/about/gallery"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    المعرض
+                  </Link>
+
+                  <Link
+                    className="w-full block"
+                    href="/ar/about/board"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    مجلس الإدارة
+                  </Link>
+
                 </div>
               )}
             </li>
@@ -217,35 +283,35 @@ export default function Navbar() {
                 <div className="bg-cblue text-white p-4 rounded flex flex-col space-y-4">
                   <Link
                     className="w-full block"
-                    href="/programs/eshraqat-elem"
+                    href="/ar/programs/eshraqat-elem"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     إشراقة علم
                   </Link>
                   <Link
                     className="w-full block"
-                    href="/programs/alemni"
+                    href="/ar/programs/alemni"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    مؤسسةعلمني
+                    مؤسسة علمني
                   </Link>
                   <Link
                     className="w-full block"
-                    href="/programs/eshraqa"
+                    href="/ar/programs/eshraqa"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     أكاديمية إشراقة
                   </Link>
                   <Link
                     className="w-full block"
-                    href="/programs/ahdaf-school"
+                    href="/ar/programs/ahdaf-school"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     مدرسة أهداف
                   </Link>
                   <Link
                     className="w-full block"
-                    href="/programs/ajwad"
+                    href="/ar/programs/ajwad"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     مركز أجود
@@ -259,43 +325,21 @@ export default function Navbar() {
                 href="#"
                 onClick={() => setIsMenuOpen(false)}
               >
-                زكاة وصدقة
+                الزكاة والصدقة
               </Link>
-            </li>
-            <li className="relative">
-              <button
-                className="w-full text-right flex justify-between items-center"
-                onClick={() => toggleDropdown("language")}
-              >
-                اللغة
-                <span
-                  className={`transform transition-transform ${
-                    activeDropdown === "language" ? "rotate-180" : ""
-                  }`}
-                >
-                  <DiractionIcon />
-                </span>
-              </button>
-              {activeDropdown === "language" && (
-                <div className="bg-[#0b1c39] text-white p-4 rounded flex flex-col space-y-4">
-                  <Link href="/ar" onClick={() => setIsMenuOpen(false)}>
-                    العربية
-                  </Link>
-                  <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                    الإنجليزية
-                  </Link>
-                </div>
-              )}
             </li>
           </ul>
           <button
             className="bg-red-600 px-4 py-2 rounded w-full"
             onClick={() => setIsMenuOpen(false)}
           >
-            <Link className="w-full block" href="/donate">
+            <Link className="w-full block" href="/ar/donate">
               تبرّع الآن
             </Link>
           </button>
+          <Link className="w-full block text-center px-4 py-2 hover:bg-gray-700 transition-colors" href="/">
+            English
+          </Link>
         </div>
       )}
     </header>

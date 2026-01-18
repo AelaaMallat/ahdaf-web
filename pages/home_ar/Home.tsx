@@ -6,7 +6,6 @@ import Hero from "./Hero";
 import Seperator from "@/components/Seperator";
 import Sponsors from "./Sponsers";
 import AhdafNews from "./latest_news_ar";
-import YouTubeVideoPage from "./videos";
 export default function Home() {
   return (
     <>
@@ -24,7 +23,6 @@ export default function Home() {
         <Seperator color="blue" forg_color="white" />
         <IslamPillars />
         <AhdafNews />
-        <YouTubeVideoPage />
         <Sponsors />
         
       </main>

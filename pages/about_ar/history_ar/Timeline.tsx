@@ -15,7 +15,7 @@ export default function Timeline({ achievements }: TimelineProps) {
   return (
     <div className="relative max-w-7xl mx-auto text-white text-justify">
       {/* Main timeline line that spans the entire container */}
-      <div className="absolute left-1/4 ml-4 top-8 bottom-8 w-0.5 bg-white "></div>
+      <div className="absolute right-1/4 ml-4 top-8 bottom-8 w-0.5 bg-white "></div>
 
       {achievements?.map((achievement, index) => (
         <TimelineItem key={index} achievement={achievement} />
@@ -33,7 +33,7 @@ function TimelineItem({ achievement }: { achievement: Achievement }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      {/* Left column: Year */}
+      {/* right column: Year */}
       <div className="w-1/4 text-center pr-4">
         <h3
           className={
@@ -57,7 +57,7 @@ function TimelineItem({ achievement }: { achievement: Achievement }) {
       </div>
 
       {/* Right column: Title and description */}
-      <div className="w-3/4 pl-4 text-left">
+      <div className="w-3/4 pl-4 text-right">
         <div className="p-4 md:pl-20 rounded-lg transition-colors duration-300 ease-in-out">
           <h3
             className={
@@ -69,8 +69,8 @@ function TimelineItem({ achievement }: { achievement: Achievement }) {
             {achievement.title}
           </h3>
           {hovered && (
-            <p className="mt-2 max-w-2xl text-cwhite md:text-lg xl:text-xl text-justify">
-              {achievement.description}
+            <p className="mt-2 max-w-2xl text-cwhite md:text-lg xl:text-xl text-justify whitespace-pre-line">              
+            {achievement.description}
             </p>
           )}
         </div>

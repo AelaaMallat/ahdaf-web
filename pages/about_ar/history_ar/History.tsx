@@ -8,75 +8,61 @@ export default function History() {
     >
       <div className="absolute inset-0 bg-[#0D2853] opacity-95"></div>
       <div className="relative z-10 text-white text-center p-6">
-        <h2 className="text-3xl font-bold text-cgreen block">OUR HISTORY</h2>
+        <h2 className="text-3xl font-bold text-cgreen block">تاريخنا</h2>
         <div className="mt-6 mx-auto max-w-7xl text-justify lg:text-center md:text-lg xl:text-xl">
-          Since 2012, Ahdaf Charity Endowment has been steadfast in addressing
-          the pressing challenges in Northern Lebanon, particularly in education
-          and community development. Recognizing the region’s struggles across
-          various sectors, we embarked on a transformative mission to empower
-          individuals, foster resilience, and drive meaningful change. Our
-          journey began with a vision to elevate educational standards and
-          cultivate a culture of growth. By investing in the youth, we aim to
-          nurture proactive leaders capable of uplifting their communities and
-          addressing societal challenges. Our initiatives focus on shaping a
-          generation that not only excels academically but also contributes
-          significantly to their community’s progress.
-        </div>
+تأسس وقف أهداف الخيري في عام 2012 ليكون منارة للتعليم والتنمية المجتمعية، ملتزمًا بتحقيق أهدافه النبيلة في خدمة المجتمع وتعزيز قيم التعاون والتكافل. ومنذ نشأته، سعى الوقف إلى تحقيق تأثير إيجابي ومستدام على حياة الأفراد والمجتمعات من خلال توفير فرص تعليمية متطورة ومبادرات تنموية مبتكرة. فيما يلي محطات بارزة من مسيرة الوقف:        </div>
 
         <h2 className="text-3xl font-bold text-cgreen block my-8">
-          MILESTONES OF AHDAF CHARITY ENDOWMENT
+          معالم مؤسسة أهداف الخيرية
         </h2>
         <Timeline
           achievements={[
             {
               year: 2012,
-              title: "Launch of Alemni Foundation",
-              description:
-                "Our journey began with a vision to elevate educational standards and cultivate a culture of growth. By investing in the youth, we aim to nurture proactive leaders capable of uplifting their communities and addressing societal challenges. Our initiatives focus on shaping a generation that not only excels academically but also contributes significantly to their community’s progress. ",
+              title: "إطلاق مؤسسة علمني",
+              description: `في عام 2012، أُطلقت مؤسسة "علمني" كأحد أوائل مشاريع الوقف. تهدف المؤسسة إلى تقديم منح جامعية للطلاب الطموحين وتوفير برامج متخصصة لدعم المهارات وبناء القدرات. تعمل المؤسسة على تمكين الطلاب ليصبحوا قادةً صالحين ومصلحين في مجتمعاتهم، مسهمين بذلك في تحقيق التنمية المستدامة.
+
+              من خلال "علمني"، تم تدريب مئات الشباب على المهارات القيادية والاجتماعية، مما ساعدهم على خوض غمار الحياة المهنية والمساهمة بفعالية في تطوير مجتمعاتهم.`
             },
             {
               year: 2013,
-              title: "Launch of Eshraqa Academy",
-              description:
-                "In 2013, we proudly established Eshraqa Academy, a comprehensive initiative designed to support children and teens. Through academic retention programs, recreational activities, and psycho-social support, Eshraqa Academy addressed both the academic and emotional needs of students, creating a solid foundation for their future.",
+              title: "تأسيس أكاديمية \"إشراقة\"",
+              description: "في عام 2013، تم إطلاق \"أكاديمية إشراقة\" لدعم الطلاب في المراحل التعليمية المختلفة من الابتدائية إلى الثانوية.\n\nتهدف الأكاديمية إلى:\n• تقديم الدعم الأكاديمي الشامل.\n• توفير بيئة تعليمية آمنة ومحفزة.\n• تعزيز ثقة الطلاب بأنفسهم وتمكينهم من تحقيق إمكاناتهم الكاملة.\n\nاستطاعت الأكاديمية أن تصبح منصة متكاملة تدعم الطلاب على المستوى التعليمي والنفسي، مما جعلها واحدة من المبادرات الرائدة في تعزيز التعليم المدرسي."
             },
             {
               year: 2015,
               title:
-                "Establishment of Ajwad The Lebanese Centre for School Development",
+                "افتتاح مركز \"أجود\" لتطوير المدارس",
               description:
-                "In 2015, we launched the services of Ajwad Centre to enhance private education in Northern Lebanon. This pioneering institution introduced active learning curricula and modern teaching methodologies and shifted educational practices from traditional approaches to more dynamic and effective methods. ",
+                "في عام 2015، افتتح وقف أهداف الخيري مركز \"أجود\" اللبناني ليكون رائدًا في تطوير المدارس وتعزيز جودة التعليم. يقدم المركز تدريبات شاملة ومتخصصة للمعلمين والكادر التعليمي، ويركز على:\n• تطبيق أساليب التعليم النشط.\n• مواكبة التطورات الحديثة في مجال التعليم.\n• تحسين البيئة التعليمية بما ينعكس إيجابًا على أداء الطلاب.\n\nساهم المركز في تطوير مئات المدارس في المنطقة، مما عزز جودة التعليم وأحدث تغييرًا إيجابيًا ملموسًا.",
             },
             {
               year: 2022,
-              title: "Founding of Ahdaf School",
+              title: "تأسيس مدرسة أهداف",
               description:
-                "A Response to Crisis In 2022, as Lebanon’s economic crisis deepened, we responded by founding Ahdaf School. This initiative provides families with an affordable and supportive educational environment rooted in Islamic values. Despite the challenges, Ahdaf School ensures access to quality education, embodying our unwavering commitment to the community.",
+                "في عام 2022، ومع تعمّق الأزمة الاقتصادية في لبنان، استجبنا من خلال تأسيس مدرسة أهداف. تهدف إلى توفير بيئة تعليمية ميسورة التكلفة وداعمة للأسر، مستندة إلى القيم الإسلامية. بالرغم من التحديات، تضمن مدرسة أهداف الوصول إلى تعليم ذي جودة عالية، مجسدةً التزامنا الراسخ تجاه المجتمع.",
             },
             {
               year: 2023,
-              title: "Eshraqat Elem Independent Vision",
-              description:
-                "In 2023, Eshraqat Elem emerged as a visionary initiative with its own strategy and objectives. By focusing on academic support and technical skill development, it empowers high school students from both public and private schools in Northern Lebanon. With their enhanced competencies, students from Eshraqat Elem are prepared to thrive in an ever-evolving world.",
+              title: "إطلاق أكاديمية \"إشراقة علم\" ",
+              description: "استقلت أكاديمية \"إشراقة\" لتؤسس كيانها الخاص الذي يركز على دعم طلاب المرحلة الثانوية. تقدم المؤسسة برامج متخصصة تهدف إلى:\n• دعم الطلاب أكاديميًا\n• تنمية مهاراتهم الشخصية والمهنية\n• إعدادهم لمستقبل واعد من خلال التوجيه الأكاديمي والمهني"
             },
             {
               year: 2024,
-              title: " Launch of Alemni Club",
-              description:
-                "Later in 2024, we expanded our reach by establishing Alemni Club, a dedicated space for undergraduate students. Alemni Club fosters academic excellence and personal growth, offering facilities for studying and engagement in extracurricular activities such as chess, debate clubs and reading groups. It serves as a sanctuary for young minds to thrive and connect.",
+              title: "افتتاح نادي \"نادي علمني للشباب الجامعي\"",
+              description: "\"نادي علمني\" هو مكان موجهة للشباب تُمكّنهم من التركيز على تحقيق طموحاتهم التعليمية والشخصية. يقدم النادي مجموعة متنوعة من الأنشطة:\n• تنظيم دورات تدريبية خارجية لتنمية المهارات.\n• توفير مساحات آمنة للدراسة والإبداع.\n• إنشاء نوادٍ متخصصة مثل نادي الشطرنج، نادي القرآن الكريم، ونادي الرسم.\n\nيهدف النادي إلى تحفيز الشباب على تحقيق طموحاتهم وتعزيز مشاركتهم الإيجابية في المجتمع."
             },
           ]}
         />
         <h2 className="text-3xl font-bold text-cgreen block my-8 uppercase">
-          Ahdaf Charity Endowment Today
+          رؤية مستدامة للمستقبل
         </h2>
         <div className="mt-6 mx-auto max-w-7xl text-justify lg:text-center md:text-lg xl:text-xl">
-          Through these milestones, Ahdaf Charity Endowment has consistently
-          demonstrated its unwavering dedication to educational excellence and
-          community empowerment in Northern Lebanon. Guided by a clear vision
-          and a strong sense of purpose, we continue to drive transformative
-          change. We invite you to join us in shaping a brighter future for the
-          region- one initiative at a time.
+          منذ تأسيسه، استمر وقف أهداف الخيري في النمو والابتكار، مستلهمًا
+           رؤيته "نطور الانسان ليطور العالم" ورسالته من بناء قيم 
+          العطاء والتنمية. وبتوفيق الله ثم بجهود فريقه وشركائه، يواصل
+           الوقف مسيرته في بناء جيل متعلم ومتمكن يسهم في نهضة مجتمعه،
+           ملتزمًا بتحقيق رؤيته في دعم التعليم والتنمية المستدامة.
         </div>
       </div>
     </section>

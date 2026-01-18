@@ -2,7 +2,7 @@ export default function Impact() {
   return (
     <section className="py-16 bg-cblue">
       <div className="lg:container text-center lg:text-right mx-auto">
-        <h2 className="text-3xl lg:text-4xl font-bold md:ml-16">
+        <h2 className="text-3xl lg:text-4xl mr-12 font-bold md:ml-16">
           تأثيرنا
           <span className="text-xl text-cbrown pr-3 block md:inline">
             2020-2025
