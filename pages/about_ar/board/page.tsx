@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 type Person = {
   id: number;
@@ -67,9 +68,11 @@ const BoardPageAr: React.FC = () => {
               key={p.id}
               className="w-64 h-96 bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden flex flex-col items-center p-6 hover:shadow-lg transition-shadow duration-300"
             >
-              <img
+              <Image
                 src={p.photo}
                 alt={p.name}
+                width={192}
+                height={192}
                 className="w-48 h-48 object-cover rounded-lg mb-4"
               />
               <h3 className="text-xl font-semibold text-[#102F5C] text-center mb-2">{p.name}</h3>
@@ -103,9 +106,11 @@ const BoardPageAr: React.FC = () => {
               <div className="flex gap-6 mb-6">
                 {/* Image */}
                 <div className="flex-shrink-0">
-                  <img
+                  <Image
                     src={selectedPerson.photo}
                     alt={selectedPerson.name}
+                    width={96}
+                    height={96}
                     className="w-24 h-24 object-cover rounded-lg"
                   />
                 </div>
